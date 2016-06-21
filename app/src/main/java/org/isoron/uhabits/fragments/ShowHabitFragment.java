@@ -44,14 +44,12 @@ import org.isoron.uhabits.helpers.DateHelper;
 import org.isoron.uhabits.helpers.ReminderHelper;
 import org.isoron.uhabits.helpers.UIHelper;
 import org.isoron.uhabits.models.Habit;
-import org.isoron.uhabits.models.Score;
 import org.isoron.uhabits.tasks.BaseTask;
 import org.isoron.uhabits.views.HabitDataView;
 import org.isoron.uhabits.views.HabitFrequencyView;
 import org.isoron.uhabits.views.HabitHistoryView;
 import org.isoron.uhabits.views.HabitScoreView;
 import org.isoron.uhabits.views.HabitStreakView;
-import org.isoron.uhabits.views.RingView;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -209,7 +207,7 @@ public class ShowHabitFragment extends Fragment
         refreshData();
     }
 
-    private void updateScore(View view)
+    /*private void updateScore(View view)
     {
         if(habit == null) return;
         if(view == null) return;
@@ -237,16 +235,16 @@ public class ShowHabitFragment extends Fragment
 
         monthDiffLabel.setTextColor(monthDiff >= 0 ? activeColor : inactiveColor);
         yearDiffLabel.setTextColor(yearDiff >= 0 ? activeColor : inactiveColor);
-    }
+    }*/
 
     private void updateHeaders(View view)
     {
         updateColor(view, R.id.tvHistory);
-        updateColor(view, R.id.tvOverview);
+        //updateColor(view, R.id.tvOverview);
         updateColor(view, R.id.tvStrength);
         updateColor(view, R.id.tvStreaks);
         updateColor(view, R.id.tvWeekdayFreq);
-        updateColor(view, R.id.scoreLabel);
+        //updateColor(view, R.id.scoreLabel);
     }
 
     private void updateColor(View view, int viewId)
@@ -335,7 +333,7 @@ public class ShowHabitFragment extends Fragment
             @Override
             protected void onProgressUpdate(Integer... values)
             {
-                updateScore(getView());
+                //updateScore(getView());
                 if(dataViews == null) return;
                 dataViews.get(values[0]).postInvalidate();
             }

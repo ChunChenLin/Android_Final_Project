@@ -41,7 +41,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import org.isoron.uhabits.fragments.ListHabitsFragment;
-import org.isoron.uhabits.helpers.DateHelper;
 import org.isoron.uhabits.helpers.ReminderHelper;
 import org.isoron.uhabits.helpers.UIHelper;
 import org.isoron.uhabits.models.Checkmark;
@@ -52,8 +51,6 @@ import org.isoron.uhabits.widgets.FrequencyWidgetProvider;
 import org.isoron.uhabits.widgets.HistoryWidgetProvider;
 import org.isoron.uhabits.widgets.ScoreWidgetProvider;
 import org.isoron.uhabits.widgets.StreakWidgetProvider;
-
-import java.io.IOException;
 
 public class MainActivity extends BaseActivity
         implements ListHabitsFragment.OnHabitClickListener
@@ -108,7 +105,7 @@ public class MainActivity extends BaseActivity
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         UIHelper.incrementLaunchCount(this);
         UIHelper.updateLastAppVersion(this);
-        showTutorial();
+        //showTutorial();
 
         new AsyncTask<Void, Void, Void>() {
             @Override
@@ -122,7 +119,7 @@ public class MainActivity extends BaseActivity
 
     }
 
-    private void showTutorial()
+    /*private void showTutorial()
     {
         Boolean firstRun = prefs.getBoolean("pref_first_run", true);
 
@@ -136,7 +133,7 @@ public class MainActivity extends BaseActivity
             Intent intent = new Intent(this, IntroActivity.class);
             this.startActivity(intent);
         }
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -180,17 +177,23 @@ public class MainActivity extends BaseActivity
                 return true;
             }
 
-            case R.id.action_faq:
+            case R.id.log_out:
             {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(getString(R.string.helpURL)));
+                Intent intent = new Intent(this, LogOut.class);
                 startActivity(intent);
                 return true;
             }
 
             default:
+            {
+                /*Context context = getApplicationContext();
+                CharSequence text = "Hello toast!";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();*/
                 return super.onOptionsItemSelected(item);
+            }
         }
     }
 
@@ -220,49 +223,13 @@ public class MainActivity extends BaseActivity
                 listHabitsFragment.showImportDialog();
                 break;
 
-            case RESULT_EXPORT_CSV:
+            /*case RESULT_EXPORT_CSV:
                 listHabitsFragment.exportAllHabits();
                 break;
 
             case RESULT_EXPORT_DB:
                 listHabitsFragment.exportDB();
-                break;
-
-            case RESULT_BUG_REPORT:
-                generateBugReport();
-                break;
-        }
-    }
-
-    private void generateBugReport()
-    {
-        try
-        {
-            HabitsApplication.dumpBugReportToFile();
-        }
-        catch (IOException e)
-        {
-            // ignored
-        }
-
-        try
-        {
-            String log = "---------- BUG REPORT BEGINS ----------\n";
-            log += HabitsApplication.generateBugReport();
-            log += "---------- BUG REPORT ENDS ------------\n";
-
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_SEND);
-            intent.setType("message/rfc822");
-            intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "dev@loophabits.org" });
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Bug Report - Loop Habit Tracker");
-            intent.putExtra(Intent.EXTRA_TEXT, log);
-            startActivity(intent);
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-            showToast(R.string.bug_report_failed);
+                break;*/
         }
     }
 

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (C) 2016 Álinson Santos Xavier <isoron@gmail.com>
   ~
   ~ This file is part of Loop Habit Tracker.
@@ -20,55 +19,60 @@
 
 <resources>
 
-    <string name="app_name">Loop Habit Tracker</string>
-    <string name="main_activity_title">Habits</string>
+    <string name="facebook_app_id">254366288288674</string>
+
+    <string name="loginWelcome">Login to track your goals right now!</string>
+    <string name="Hello">Hello, there!</string>
+
+    <string name="app_name">Goal Tracker</string>
+    <string name="main_activity_title">Goals</string>
     <string name="action_settings">Settings</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
     <string name="archive">Archive</string>
     <string name="unarchive">Unarchive</string>
-    <string name="add_habit">Add habit</string>
+    <string name="add_habit">Add goal</string>
     <string name="color_picker_default_title">Change color</string>
 
-    <string name="toast_habit_created">Habit created.</string>
-    <string name="toast_habit_deleted">Habits deleted.</string>
-    <string name="toast_habit_restored">Habits restored.</string>
+    <string name="toast_habit_created">Goal created.</string>
+    <string name="toast_habit_deleted">Goal(s) deleted.</string>
+    <string name="toast_habit_restored">Goal(s) restored.</string>
     <string name="toast_nothing_to_undo">Nothing to undo.</string>
     <string name="toast_nothing_to_redo">Nothing to redo.</string>
-    <string name="toast_habit_changed">Habit changed.</string>
-    <string name="toast_habit_changed_back">Habit changed back.</string>
-    <string name="toast_habit_archived">Habits archived.</string>
-    <string name="toast_habit_unarchived">Habits unarchived.</string>
+    <string name="toast_habit_changed">Goal changed.</string>
+    <string name="toast_habit_changed_back">Goal changed back.</string>
+    <string name="toast_habit_archived">Goal(s) archived.</string>
+    <string name="toast_habit_unarchived">Goal(s) unarchived.</string>
 
-    <string name="title_activity_show_habit" translatable="false"/>
+    <string name="title_activity_show_habit" translatable="false" />
     <string name="overview">Overview</string>
-    <string name="habit_strength">Habit strength</string>
+    <string name="habit_strength">Goal strength</string>
     <string name="history">History</string>
     <string name="clear">Clear</string>
-    <string name="description_hint">Question (Did you … today?)</string>
-    <string name="repeat">Repeat</string>
+    <string name="description_hint">Goal Description</string>
+    <string name="repeat">Time to finish</string>
     <string name="times_every">times in</string>
     <string name="days">days</string>
     <string name="reminder">Reminder</string>
     <string name="discard">Discard</string>
     <string name="save">Save</string>
     <string name="streaks">Streaks</string>
-    <string name="no_habits_found">You have no active habits</string>
+    <string name="no_habits_found">You have no active goals</string>
     <string name="long_press_to_toggle">Press-and-hold to check or uncheck</string>
     <string name="reminder_off">Off</string>
     <string name="validation_name_should_not_be_blank">Name cannot be blank.</string>
     <string name="validation_number_should_be_positive">Number must be positive.</string>
     <string name="validation_at_most_one_rep_per_day">You can have at most one repetition per day</string>
-    <string name="create_habit">Create habit</string>
-    <string name="edit_habit">Edit habit</string>
+    <string name="create_habit">Create goal</string>
+    <string name="edit_habit">Edit goal</string>
     <string name="check">Check</string>
     <string name="snooze">Later</string>
 
     <!-- App introduction -->
     <string name="intro_title_1">Welcome</string>
-    <string name="intro_description_1">Loop Habit Tracker helps you create and maintain good habits.</string>
+    <string name="intro_description_1">Counter Mission helps you fulfill your goals on time and efficiently.</string>
 
-    <string name="intro_title_2">Create some new habits</string>
+    <string name="intro_title_2">Create some new goals</string>
     <string name="intro_description_2">Every day, after performing your habit, put a checkmark on the app.</string>
 
     <string name="intro_title_3">Keep doing it</string>
@@ -142,7 +146,7 @@
     <string name="five_times_per_week">5 times per week</string>
 
     <string name="custom_frequency">Custom …</string>
-    <string name="help">Help &amp; FAQ</string>
+    <string name="logout">Log Out</string>
     <string name="could_not_export">Failed to export data.</string>
     <string name="could_not_import">Failed to import data.</string>
     <string name="file_not_recognized">File not recognized.</string>
